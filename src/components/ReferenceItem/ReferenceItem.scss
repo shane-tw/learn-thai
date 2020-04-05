@@ -1,0 +1,50 @@
+$reference-item--size: 150px;
+$referece-item--padding: 10px;
+$reference-item--size-with-padding: $reference-item--size + ($referece-item--padding * 2);
+
+.reference-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: $reference-item--size;
+    height: $reference-item--size;
+    background-color: #558b2f;
+    border-radius: 8px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__row > :only-child {
+        margin: 0 auto;
+    }
+
+    &__thai, &__english, &__romanised {
+        font-size: 16px;
+    }
+
+    &__symbol {
+        color: yellow;
+        font-size: 50px;
+    }
+
+    &__badge {
+        border-radius: 8px;
+        padding: 4px 10px;
+
+        &--low {
+            background-color: #EEFF41;
+        }
+
+        &--mid {
+            background-color: #FFD740;
+        }
+
+        &--high {
+            background-color: #69F0AE;
+        }
+    }
+}

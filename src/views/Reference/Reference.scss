@@ -1,0 +1,8 @@
+$reference-item--width: 170px;
+
+.reference-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $reference-item--width);
+    grid-gap: 5px;
+    justify-content: center;
+}
