@@ -43,7 +43,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history', // uncommented for now, GitHub pages doesn't like it
   base: process.env.BASE_URL,
   routes
 })
