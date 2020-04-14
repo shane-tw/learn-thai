@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <router-view/>
   </div>
 </template>
@@ -14,6 +14,10 @@ export default Vue.extend({
 
 <style lang="scss">
 @import '@/scss/container.scss';
+
+body {
+  margin: 0 !important;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

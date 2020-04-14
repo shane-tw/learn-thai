@@ -1,8 +1,8 @@
 import Vowel from '@/models/vowel'
 
 export default [
-  { symbol: '◌ะ', thai: 'สระอะ', romanised: 'sara a wisanchani', length: 'short' },
-  { symbol: '◌า', thai: 'สระอา', romanised: 'sara a lak khang', length: 'long' },
+  { symbol: '◌ะ', thai: 'สระอะ', romanised: 'sara a', length: 'short' },
+  { symbol: '◌า', thai: 'สระอา', romanised: 'sara a', length: 'long' },
   { symbol: '◌ิ', thai: 'สระอิ', romanised: 'sara i', length: 'short' },
   { symbol: '◌ี', thai: 'สระอี', romanised: 'sara i', length: 'long' },
   { symbol: '◌ึ', thai: 'สระอึ', romanised: 'sara ue', length: 'short' },

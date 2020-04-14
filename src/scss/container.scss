@@ -8,6 +8,13 @@
   margin-left: auto;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
