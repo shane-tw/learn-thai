@@ -1,14 +1,28 @@
 <template>
-  <div>
-    <h1>Reference</h1>
-    <div style="margin-bottom: 10px;">
-      <router-link to="consonants" style="margin: 10px;">Consonants</router-link>
-      <router-link to="vowels" style="margin: 10px;">Vowels</router-link>
-      <router-link to="tones" style="margin: 10px;">Tones</router-link>
-      <router-link to="numbers" style="margin: 10px;">Numbers</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div>
+		<v-tabs
+			v-model="tab"
+			background-color="deep-purple accent-4"
+			class="elevation-2"
+			dark
+			:centered="centered"
+			:grow="grow"
+			:vertical="vertical"
+			:right="right"
+			:prev-icon="prevIcon ? 'mdi-arrow-left-bold-box-outline' : undefined"
+			:next-icon="nextIcon ? 'mdi-arrow-right-bold-box-outline' : undefined"
+			:icons-and-text="icons"
+		>
+			<v-tabs-slider></v-tabs-slider>
+
+			<v-tab to="consonants">Consonants</v-tab>
+			<v-tab to="vowels">Vowels</v-tab>
+			<v-tab to="tones">Tones</v-tab>
+			<v-tab to="numbers">Numbers</v-tab>
+		</v-tabs>
+
+		<router-view/>
+	</div>
 </template>
-<script src="./Reference.ts" lang="ts"></script>
+<script src="./Reference.js"></script>
 <style src="./Reference.scss" lang="scss"></style>
