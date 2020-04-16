@@ -17,7 +17,6 @@ const routes = [
 		// this generates a separate chunk (reference.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () => import(/* webpackChunkName: "reference" */ '../views/Reference/Reference.vue'),
-		meta: { title: 'Reference' },
 		children: [
 			{
 				path: '',
@@ -25,23 +24,19 @@ const routes = [
 			},
 			{
 				path: 'consonants',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Consonants/Consonants.vue'),
-				meta: { title: 'Reference' }
+				component: () => import(/* webpackChunkName: "reference" */ '../views/Consonants/Consonants.vue')
 			},
 			{
 				path: 'vowels',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Vowels/Vowels.vue'),
-				meta: { title: 'Reference' }
+				component: () => import(/* webpackChunkName: "reference" */ '../views/Vowels/Vowels.vue')
 			},
 			{
 				path: 'tones',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Tones/Tones.vue'),
-				meta: { title: 'Reference' }
+				component: () => import(/* webpackChunkName: "reference" */ '../views/Tones/Tones.vue')
 			},
 			{
 				path: 'numbers',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Numbers/Numbers.vue'),
-				meta: { title: 'Reference' }
+				component: () => import(/* webpackChunkName: "reference" */ '../views/Numbers/Numbers.vue')
 			}
 		]
 	}

@@ -1,16 +1,9 @@
-$reference-item--size: 150px;
-$referece-item--padding: 10px;
-$reference-item--size-with-padding: $reference-item--size + ($referece-item--padding * 2);
-
 .reference-item {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 10px;
-	width: $reference-item--size;
-	height: $reference-item--size;
-	background-color: #8bc34a;
-	border-radius: 8px;
+	// background-color: #8bc34a;
 
 	&__row {
 		display: flex;
@@ -29,11 +22,13 @@ $reference-item--size-with-padding: $reference-item--size + ($referece-item--pad
 	&__symbol {
 		color: yellow;
 		font-size: 50px;
+		margin-right: 5px;
 	}
 
 	&__badge {
 		border-radius: 8px;
 		padding: 4px 10px;
+		margin-left: 5px;
 
 		&--low {
 			background-color: #EEFF41;

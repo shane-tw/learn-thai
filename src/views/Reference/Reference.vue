@@ -5,13 +5,6 @@
 			background-color="deep-purple accent-4"
 			class="elevation-2"
 			dark
-			:centered="centered"
-			:grow="grow"
-			:vertical="vertical"
-			:right="right"
-			:prev-icon="prevIcon ? 'mdi-arrow-left-bold-box-outline' : undefined"
-			:next-icon="nextIcon ? 'mdi-arrow-right-bold-box-outline' : undefined"
-			:icons-and-text="icons"
 		>
 			<v-tabs-slider></v-tabs-slider>
 

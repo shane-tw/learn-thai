@@ -4,5 +4,8 @@ export default {
 	name: 'Reference',
 	components: {
 		ReferenceItem
-	}
+	},
+	data: () => ({
+		tab: null
+	})
 }
