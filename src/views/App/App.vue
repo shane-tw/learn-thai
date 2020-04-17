@@ -24,13 +24,29 @@
 
 		<v-app-bar
 			app
-			color="primary"
+			color="green"
 			dark
+			dense
 			clipped-left
 		>
 			<v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="!drawer"></v-app-bar-nav-icon>
 
 			<v-toolbar-title>Learn Thai</v-toolbar-title>
+
+			<template v-slot:extension>
+				<v-tabs
+					v-model="tab"
+					centered="true"
+					background-color="green"
+				>
+					<v-tabs-slider></v-tabs-slider>
+
+					<v-tab to="consonants">Consonants</v-tab>
+					<v-tab to="vowels">Vowels</v-tab>
+					<v-tab to="tones">Tones</v-tab>
+					<v-tab to="numbers">Numbers</v-tab>
+				</v-tabs>
+			</template>
 		</v-app-bar>
 
 		<v-content>

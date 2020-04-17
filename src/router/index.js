@@ -45,7 +45,10 @@ const routes = [
 const router = new VueRouter({
 	// mode: 'history', // uncommented for now, GitHub pages doesn't like it
 	base: process.env.BASE_URL,
-	routes
+	routes,
+	scrollBehavior () {
+		return { x: 0, y: 0 }
+	}
 })
 
 export default router
