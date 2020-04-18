@@ -7,16 +7,19 @@ Vue.use(VueRouter)
 const routes = [
 	{
 		path: '/',
-		name: 'Home',
-		component: Home
+		component: Home,
+		meta: { title: 'Home' }
 	},
 	{
 		path: '/reference',
-		name: 'Reference Charts',
 		// route level code-splitting
 		// this generates a separate chunk (reference.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
-		component: () => import(/* webpackChunkName: "reference" */ '../views/Reference/Reference.vue'),
+		components: {
+			default: () => import(/* webpackChunkName: "reference" */ '../views/Reference/Reference.vue'),
+			header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+		},
+		meta: { title: 'Reference', header_extension: true },
 		children: [
 			{
 				path: '',
@@ -24,29 +27,57 @@ const routes = [
 			},
 			{
 				path: 'consonants',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Consonants/Consonants.vue')
+				components: {
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Consonants/Consonants.vue'),
+					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+				},
+				meta: { title: 'Reference', header_extension: true }
 			},
 			{
 				path: 'vowels',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Vowels/Vowels.vue')
+				components: {
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Vowels/Vowels.vue'),
+					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+				},
+				meta: { title: 'Reference', header_extension: true }
 			},
 			{
 				path: 'tones',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Tones/Tones.vue')
+				components: {
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Tones/Tones.vue'),
+					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+				},
+				meta: { title: 'Reference', header_extension: true }
 			},
 			{
 				path: 'numbers',
-				component: () => import(/* webpackChunkName: "reference" */ '../views/Numbers/Numbers.vue')
+				components: {
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Numbers/Numbers.vue'),
+					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+				},
+				meta: { title: 'Reference', header_extension: true }
 			}
 		]
+	},
+	{
+		path: '/not-found',
+		component: () => import('../views/NotFound/NotFound.vue'),
+		meta: { title: 'Not Found' }
+	},
+	{
+		path: '*',
+		redirect: '/not-found'
 	}
 ]
 
 const router = new VueRouter({
-	// mode: 'history', // uncommented for now, GitHub pages doesn't like it
+	// mode: 'history', // commented for now, GitHub pages doesn't like it
 	base: process.env.BASE_URL,
 	routes,
-	scrollBehavior () {
+	scrollBehavior (to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		}
 		return { x: 0, y: 0 }
 	}
 })

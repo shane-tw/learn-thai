@@ -1,6 +1,6 @@
 <template>
-	<div class="home">
+	<v-container fluid>
 		<p>This is the home page</p>
-	</div>
+	</v-container>
 </template>
 <script src="./Home.js"></script>

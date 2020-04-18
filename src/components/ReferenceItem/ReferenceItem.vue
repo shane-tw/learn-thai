@@ -1,6 +1,6 @@
 <template>
 	<v-col cols="6" sm="4" lg="3" xl="2">
-		<v-card color="green" class="reference-item" height="180" v-ripple @click="onClickItem">
+		<v-card color="green" class="reference-item" min-height="180" v-ripple @click="onClickItem">
 			<div class="reference-item__row">
 				<span class="reference-item__thai">
 					{{ item.thai }}
