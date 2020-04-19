@@ -17,7 +17,7 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		components: {
 			default: () => import(/* webpackChunkName: "reference" */ '../views/Reference/Reference.vue'),
-			header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+			header_extension: () => import(/* webpackChunkName: "reference" */ '../components/HeaderExtensionReference/HeaderExtensionReference.vue')
 		},
 		meta: { title: 'Reference', header_extension: true },
 		children: [
@@ -28,32 +28,28 @@ const routes = [
 			{
 				path: 'consonants',
 				components: {
-					default: () => import(/* webpackChunkName: "reference" */ '../views/Consonants/Consonants.vue'),
-					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Consonants/Consonants.vue')
 				},
 				meta: { title: 'Reference', header_extension: true }
 			},
 			{
 				path: 'vowels',
 				components: {
-					default: () => import(/* webpackChunkName: "reference" */ '../views/Vowels/Vowels.vue'),
-					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Vowels/Vowels.vue')
 				},
 				meta: { title: 'Reference', header_extension: true }
 			},
 			{
 				path: 'tones',
 				components: {
-					default: () => import(/* webpackChunkName: "reference" */ '../views/Tones/Tones.vue'),
-					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Tones/Tones.vue')
 				},
 				meta: { title: 'Reference', header_extension: true }
 			},
 			{
 				path: 'numbers',
 				components: {
-					default: () => import(/* webpackChunkName: "reference" */ '../views/Numbers/Numbers.vue'),
-					header_extension: () => import(/* webpackChunkName: "reference" */ '../components/ReferenceExtension/ReferenceExtension.vue')
+					default: () => import(/* webpackChunkName: "reference" */ '../views/Numbers/Numbers.vue')
 				},
 				meta: { title: 'Reference', header_extension: true }
 			}

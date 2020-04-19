@@ -13,7 +13,9 @@
 				<span class="reference-item__symbol">
 					{{ item.symbol }}
 				</span>
-				<img v-if="type === 'consonant'" :src="`/images/consonants/${index+1}.webp`" height="80"/>
+				<img
+					v-if="type === 'consonant'"
+					:src="`/images/${type}s/${index+1}.webp`" height="80"/>
 			</div>
 			<div class="reference-item__row">
 				<span class="reference-item__romanised">

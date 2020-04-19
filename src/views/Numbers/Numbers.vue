@@ -1,9 +1,12 @@
 <template>
 	<v-container fluid>
 		<v-row>
-			<template v-for="(number, index) in numbers">
-				<ReferenceItem type="number" :key="number.symbol" :item="number" :index="index"/>
-			</template>
+			<ReferenceItem
+				v-for="(number, index) in numbers"
+				type="number"
+				:key="number.symbol"
+				:item="number"
+				:index="index"/>
 		</v-row>
 	</v-container>
 </template>

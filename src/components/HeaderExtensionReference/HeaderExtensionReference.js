@@ -1,11 +1,7 @@
-import ReferenceItem from '@/components/ReferenceItem/ReferenceItem.vue'
 import referenceTabs from '@/consts/reference-tabs'
 
 export default {
-	name: 'Reference',
-	components: {
-		ReferenceItem
-	},
+	name: 'HeaderExtensionReference',
 	computed: {
 		activeTab: {
 			set (tab) {
@@ -14,11 +10,6 @@ export default {
 			get () {
 				return this.$store.state.activeTab
 			}
-		}
-	},
-	methods: {
-		updateRouter (val) {
-			this.$router.push(val)
 		}
 	},
 	data: () => ({

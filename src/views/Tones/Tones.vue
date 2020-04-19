@@ -1,9 +1,12 @@
 <template>
 	<v-container fluid>
 		<v-row>
-			<template v-for="(toneMark, index) in toneMarks">
-				<ReferenceItem type="tone" :key="toneMark.symbol" :item="toneMark" :index="index"/>
-			</template>
+			<ReferenceItem
+				v-for="(toneMark, index) in toneMarks"
+				type="tone"
+				:key="toneMark.symbol"
+				:item="toneMark"
+				:index="index"/>
 		</v-row>
 	</v-container>
 </template>

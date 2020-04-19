@@ -1,9 +1,12 @@
 <template>
 	<v-container fluid>
 		<v-row>
-			<template v-for="(consonant, index) in consonants">
-				<ReferenceItem type="consonant" :key="consonant.symbol" :item="consonant" :index="index"/>
-			</template>
+			<ReferenceItem
+				v-for="(consonant, index) in consonants"
+				type="consonant"
+				:key="consonant.symbol"
+				:item="consonant"
+				:index="index"/>
 		</v-row>
 	</v-container>
 </template>
