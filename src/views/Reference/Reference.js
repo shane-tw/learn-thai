@@ -7,12 +7,12 @@ export default {
 		ReferenceItem
 	},
 	computed: {
-		activeTab: {
+		referenceTab: {
 			set (tab) {
-				this.$store.commit('setActiveTab', tab)
+				this.$store.commit('setReferenceTab', tab)
 			},
 			get () {
-				return this.$store.state.activeTab
+				return this.$store.state.referenceTab
 			}
 		}
 	},

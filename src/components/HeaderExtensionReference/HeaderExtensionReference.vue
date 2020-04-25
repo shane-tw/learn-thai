@@ -1,6 +1,6 @@
 <template>
 	<v-tabs
-		v-model="activeTab"
+		v-model="referenceTab"
 		background-color="green"
 	>
 		<v-tabs-slider></v-tabs-slider>

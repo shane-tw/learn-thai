@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 	state: {
-		activeTab: ''
+		referenceTab: ''
 	},
 	mutations: {
-		setActiveTab (state, tab) {
-			state.activeTab = tab
+		setReferenceTab (state, tab) {
+			state.referenceTab = tab
 		}
 	}
 })

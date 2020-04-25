@@ -2,7 +2,7 @@ import ReferenceItem from '@/components/ReferenceItem/ReferenceItem.vue'
 import consonants from '@/consts/consonants'
 
 export default {
-	name: 'Home',
+	name: 'Consonants',
 	components: {
 		ReferenceItem
 	},

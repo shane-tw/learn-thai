@@ -1,14 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
 	{
 		path: '/',
-		component: Home,
-		meta: { title: 'Home' }
+		redirect: '/reference'
 	},
 	{
 		path: '/reference',
@@ -54,6 +52,11 @@ const routes = [
 				meta: { title: 'Reference', header_extension: true }
 			}
 		]
+	},
+	{
+		path: '/games',
+		component: () => import('../views/Games/Games.vue'),
+		meta: { title: 'Games' }
 	},
 	{
 		path: '/not-found',
