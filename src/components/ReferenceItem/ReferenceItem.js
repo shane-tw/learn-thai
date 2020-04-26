@@ -6,9 +6,9 @@ export default {
 		type: String
 	},
 	methods: {
-		onClickItem: function () {
-			const audio = new Audio(`/sounds/${this.type}s/${this.index + 1}.mp3`)
-			audio.play()
+		onClickItem () {
+			const url = `/sounds/${this.type}s/${this.index + 1}.mp3`
+			this.$store.commit('playAudio', url)
 		}
 	}
 }

@@ -1,42 +1,23 @@
 <template>
 	<v-container fluid>
-		<fieldset>
-			<legend>Choose learning type</legend>
+		<v-radio-group v-model="learningType">
+			<template v-slot:label>
+				Choose learning type
+			</template>
 
-			<label for="learning_type_quiz">Quizzes</label>
-			<input id="learning_type_quiz" name="learning_type" type="radio">
+			<v-radio label="Quizzes" value="quiz"></v-radio>
+			<v-radio label="Flashcards" value="flashcard"></v-radio>
+			<v-radio label="Freaking" value="freaking"></v-radio>
+		</v-radio-group>
 
-			<label for="learning_type_flashcard">Flashcards</label>
-			<input id="learning_type_flashcard" name="learning_type" type="radio">
+		<v-radio-group v-model="difficulty">
+			<template v-slot:label>
+				Difficulty
+			</template>
 
-			<label for="learning_type_freaking">Freaking</label>
-			<input id="learning_type_freaking" name="learning_type" type="radio">
-		</fieldset>
-
-		<fieldset>
-			<legend>Difficulty</legend>
-
-			<label for="difficulty_easy">Easy</label>
-			<input id="difficulty_easy" name="difficulty" type="radio">
-
-			<label for="difficulty_medium">Medium</label>
-			<input id="difficulty_medium" name="difficulty" type="radio">
-
-			<label for="difficulty_hard">Hard</label>
-			<input id="difficulty_hard" name="difficulty" type="radio">
-		</fieldset>
-
-		<fieldset>
-			<legend>Choose characters you want to appear</legend>
-
-			<label for="difficulty_easy">Easy</label>
-			<input id="difficulty_easy" name="difficulty" type="radio">
-
-			<label for="difficulty_medium">Medium</label>
-			<input id="difficulty_medium" name="difficulty" type="radio">
-
-			<label for="difficulty_hard">Hard</label>
-			<input id="difficulty_hard" name="difficulty" type="radio">
-		</fieldset>
+			<v-radio label="Easy" value="easy"></v-radio>
+			<v-radio label="Medium" value="medium"></v-radio>
+			<v-radio label="Max" value="max"></v-radio>
+		</v-radio-group>
 	</v-container>
 </template>
